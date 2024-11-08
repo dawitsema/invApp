@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-mq84ls1g20-8p_sc(9gxdco=qv^t*o%zx^%6q(*elt9y#oon%&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['your-heroku-app-name.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -50,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
 ]
 
 ROOT_URLCONF = 'invProject.urls'
@@ -82,6 +85,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES['default'] = dj_database_url.parse('postgresql://dawit_inventorymanagement_user:3Wq8l2WTtmydzSmc8AJnKgHhYwn4csUG@dpg-csn57r5umphs73b22isg-a.oregon-postgres.render.com/dawit_inventorymanagement')
+
+# postgresql://dawit_inventorymanagement_user:3Wq8l2WTtmydzSmc8AJnKgHhYwn4csUG@dpg-csn57r5umphs73b22isg-a.oregon-postgres.render.com/dawit_inventorymanagement
 
 
 # Password validation
@@ -118,7 +125,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
