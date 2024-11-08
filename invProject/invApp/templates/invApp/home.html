@@ -1,0 +1,15 @@
+{% extends "invApp/layout.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Inventory Management System</h1>
+    <p class="lead">manage your product efficiently and effectively.</p>
+    <hr class="my-4">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque numquam molestiae possimus beatae facilis, ipsum consequuntur. Vero molestias repudiandae tempore.</p>
+    <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg" role="button">View Product</a>
+</div>
+
+
+{% endblock %}
