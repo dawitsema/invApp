@@ -13,6 +13,7 @@ idna==3.7
 packaging==24.1
 pipenv==2024.1.0
 platformdirs==4.3.6
+psycopg2==2.9.10
 psycopg2-binary==2.9.10
 PyPDF2==3.0.1
 requests==2.32.3
