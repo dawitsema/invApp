@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mq84ls1g20-8p_sc(9gxdco=qv^t*o%zx^%6q(*elt9y#oon%&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -91,11 +91,7 @@ DATABASES = {
     }
 }
 
-# DATABASES['default'] = dj_database_url.parse('postgresql://dawit_inventorymanagement_user:3Wq8l2WTtmydzSmc8AJnKgHhYwn4csUG@dpg-csn57r5umphs73b22isg-a.oregon-postgres.render.com/dawit_inventorymanagement')
-
-# postgresql://dawit_inventorymanagement_user:3Wq8l2WTtmydzSmc8AJnKgHhYwn4csUG@dpg-csn57r5umphs73b22isg-a.oregon-postgres.render.com/dawit_inventorymanagement
-
-
+DATABASES['default'] = dj_database_url.parse('postgresql://invapp_uy1g_user:G1iXm43rmOKT9xLpwKTSFoMw3joilwpj@dpg-csn6d41u0jms7381lvh0-a.oregon-postgres.render.com/invapp_uy1g')
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
